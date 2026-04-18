@@ -32,13 +32,6 @@ Build the control layer that bridges deep learning perception to physical actuat
 
 ## Project C: Visual Servo (Capstone)
 
-**Architecture:** Laptop perception + Arduino execution
-┌─────────────┐      Serial       ┌─────────────┐
-│   Laptop    │ ◄────────────────►│   Arduino   │
-│  YOLOv8     │  angle_cmd        │  PWM driver │
-│  Python PID │                   │  SG90 servo │
-└─────────────┘                   └─────────────┘
-
 **Flow:** `cv2.VideoCapture` → YOLOv8 inference → pixel error → PID → serial → servo angle
 
 ## Tech Stack
@@ -73,12 +66,6 @@ A: Open-loop        B: Closed-loop         C: AI-in-the-loop
 | Phase 2 (Isaac Lab) | Deploy RL policies to real hardware |
 | Phase 3 (VLA) | Edge interface for vision-language-action models |
 | Lab Entry | Demonstrated control + perception integration |
-
-## The Pitch
-
-> *"Because I don't just write elegant AI architectures—I've tuned motor PID controllers and I know what real-world friction looks like."*
-
-— Summer 2028, when asked why a software engineer belongs in a robotics lab.
 
 ## Next Step
 
